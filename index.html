@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Moneda</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Herramientas Financieras</h1>
+      <nav>
+        <ul>
+          <li><a href="#converter">Conversor de Moneda</a></li>
+          <li><a href="#about">Acerca de</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        id="converter"
+        class="section"
+        aria-labelledby="converter-heading"
+      >
+        <div class="container">
+          <h2 id="converter-heading">Conversor de Moneda</h2>
+          <p>
+            Utiliza esta herramienta para convertir entre diferentes monedas con
+            tasas de cambio predefinidas.
+          </p>
+          <form id="converter-form" aria-describedby="converter-description">
+            <div class="form-group">
+              <label for="amount">Cantidad:</label>
+              <input
+                type="number"
+                id="amount"
+                placeholder="Ingresa la cantidad"
+                required
+                aria-required="true"
+              />
+            </div>
+            <div class="form-group">
+              <label for="from-currency">De:</label>
+              <select id="from-currency" required aria-required="true">
+                <option value="USD">USD - Dólar Estadounidense</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - Libra Esterlina</option>
+                <option value="JPY">JPY - Yen Japonés</option>
+                <option value="MXN">MXN - Peso Mexicano</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="to-currency">A:</label>
+              <select id="to-currency" required aria-required="true">
+                <option value="USD">USD - Dólar Estadounidense</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - Libra Esterlina</option>
+                <option value="JPY">JPY - Yen Japonés</option>
+                <option value="MXN">MXN - Peso Mexicano</option>
+              </select>
+            </div>
+            <button type="submit">Convertir</button>
+          </form>
+          <div id="result" role="status" aria-live="polite"></div>
+          <img src="./img/01.png" alt="" class="imagen" />
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-labelledby="about-heading">
+        <div class="container">
+          <h2 id="about-heading">Acerca de</h2>
+          <p>
+            Esta herramienta de conversión de moneda te permite convertir entre
+            las principales divisas del mundo utilizando tasas de cambio
+            predefinidas. Es una forma rápida y fácil de obtener una estimación
+            de los valores de las monedas.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="exchange-rates"
+        class="section"
+        aria-labelledby="exchange-rates-heading"
+      >
+        <div class="container">
+          <h2 id="exchange-rates-heading">Tasas de Cambio predefinidas</h2>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Moneda</th>
+                <th scope="col">USD</th>
+                <th scope="col">EUR</th>
+                <th scope="col">GBP</th>
+                <th scope="col">JPY</th>
+                <th scope="col">MXN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">USD</th>
+                <td>1</td>
+                <td>0.85</td>
+                <td>0.75</td>
+                <td>110</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <th scope="row">EUR</th>
+                <td>1.18</td>
+                <td>1</td>
+                <td>0.88</td>
+                <td>129.53</td>
+                <td>23.53</td>
+              </tr>
+              <tr>
+                <th scope="row">GBP</th>
+                <td>1.34</td>
+                <td>1.14</td>
+                <td>1</td>
+                <td>146.92</td>
+                <td>26.82</td>
+              </tr>
+              <tr>
+                <th scope="row">JPY</th>
+                <td>0.0091</td>
+                <td>0.0077</td>
+                <td>0.0068</td>
+                <td>1</td>
+                <td>0.18</td>
+              </tr>
+              <tr>
+                <th scope="row">MXN</th>
+                <td>0.05</td>
+                <td>0.0425</td>
+                <td>0.0373</td>
+                <td>5.56</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <div class="container">
+          <h2 id="contact-heading">Contacto</h2>
+          <p>
+            Si tienes alguna pregunta o comentario, no dudes en
+            <a href="mailto:soporte@finanzas.com">contactarnos</a>.
+          </p>
+          <img
+            src="./img/contacto.jpg"
+            alt="Contáctanos, un agente especializado está listo para ayudarte"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2024 Herramientas Financieras. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
